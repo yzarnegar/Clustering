@@ -10,19 +10,19 @@ The PAM (partitioning around medoids) algorithm is based on the search for k rep
 Using mRNA and miRNA data Hierarchical clustering based on complete linkage method and PAM clustering (partitioning around medoids) were performed to see if some new subtypes of non-small cell lung cancer (NSCLC) could be revealed. Regarding the results for mRNA data, it seems that there are more that 3 clusters. Also, regarding plot from PAM object, it seems there are many over laps between 3 clusters so there should be more clusters suggesting existence of some new subtypes of disease besides AC, SCC and LCC. 
 
 
-<img src="https://user-images.githubusercontent.com/57342758/73779066-fdd07e80-4740-11ea-86d7-cf2d888c7a93.png" width="450" height="450">
+<img src="https://user-images.githubusercontent.com/57342758/73779066-fdd07e80-4740-11ea-86d7-cf2d888c7a93.png" width="400" height="400">
 
 
-![image](https://user-images.githubusercontent.com/57342758/73779589-cb735100-4741-11ea-937f-9bfc2903c0a3.png)
+<img src="https://user-images.githubusercontent.com/57342758/73779589-cb735100-4741-11ea-937f-9bfc2903c0a3.png" width="400" height="400">
 
 Result from PAM clustering of observations for miRNA data also suggested the posibility of more subtypes for NSCLC. It seems with 5 chosen number of clusters, less overlaps between clusters can be detected.
 
-![image](https://user-images.githubusercontent.com/57342758/73779537-b8f91780-4741-11ea-8641-5b29a25f438a.png)
+<img src="https://user-images.githubusercontent.com/57342758/73779537-b8f91780-4741-11ea-8641-5b29a25f438a.png" width="400" height="400">
 
 
 Hopach Function form “Hopach” package also was used and clusters were produced for miRNA data and the proportion of times a gene belongs to the cluster was calculated. The bootplot function was implemented to provide barplot of the bootstrap reappearance proportions for each gene and each cluster. Following the barplot is provided. 
 
-![image](https://user-images.githubusercontent.com/57342758/73779672-ed6cd380-4741-11ea-953b-e46cec60f13c.png)
+<img src="https://user-images.githubusercontent.com/57342758/73779672-ed6cd380-4741-11ea-953b-e46cec60f13c.png" width="400" height="400">
 
 Each gene is showed as narrow horizontal bar. If the color of the bar is one color, then the gene is estimated to belong to that cluster otherwise it belongs to more than one cluster. Regarding barplot, it seems there are 3 major cluster of genes probably related to SCC, Ac and LCC but also there are additional clusters of gens suggesting that there should be more subtypes of cancer NSCLC related with those genes. Integration of the mRNA and miRNA data also suggested possibility of new patterns and classes. 
 
