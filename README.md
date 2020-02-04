@@ -13,7 +13,7 @@ Using mRNA and miRNA data Hierarchical clustering based on complete linkage meth
 
 
 
-Result from PAM clustering of observations for miRNA data is showed in figure 3. Regarding plot from PAM object, it seems there are many over laps for 3 clusters situation. So probably there should be other subtypes of NSCLC besides SCC, LCC and AC. It seems with 5 chosen number of clusters, less overlaps between clusters can be detected.  The optimum number of clusters were 2 for both miRNA and mRNA data. 
+Regarding plot from PAM object, it seems there are many over laps for 3 clusters situation. So probably there should be other subtypes of NSCLC besides SCC, LCC and AC. It seems with 5 chosen number of clusters, less overlaps between clusters can be detected.  The optimum number of clusters were 2 for both miRNA and mRNA data. 
 
 ![pam_clustering](https://github.com/yzarnegar/PAM_Clustering/issues/2#issue-559910909)
 
