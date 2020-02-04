@@ -23,3 +23,5 @@ Hopach Function form “Hopach” package also was used and clusters were produc
 
 
 Each gene is showed as narrow horizontal bar. If the color of the bar is one color, then the gene is estimated to belong to that cluster otherwise it belongs to more than one cluster. Regarding barplot, it seems there are 3 major cluster of genes probably related to SCC, Ac and LCC but also there are additional clusters of gens suggesting that there should be more subtypes of cancer NSCLC related with those genes. 
+
+![image](https://user-images.githubusercontent.com/57342758/73778670-6a974900-4740-11ea-8b37-23ea77e52049.png)
