@@ -1,1 +1,97 @@
+library(AgiMicroRna)
+dim(exprs(clinic))
+library(hopach)
+library(supclust)
+library(pamr)
+library(miRNAmRNA)
+library(affy)
+library(Biobase)
+library(genefilter)
+library(pvclust)
+library(biclust)
+library(MASS)
+library(grid)
+library(colorspace)
+library(lattice)
+library(cluster)
+library(ggplot2)
+library (pvclust)
+library(cluster) 
+####hierarchical clustering
+x1<-as.dist(1-cor(Chemores.GE))
+clust.cor<-hclust(x1, method="complete")
+plot(clust.cor,sex=0.6,col=3,main="mRNA")
+rect.hclust(clust.cor, 5)
+#result < - pvclust(Chemores.GE, nboot=10)plot(results)
+#bics <- biclust(Chemores.GE,BCPlaid(), back.fit = 2, shuffle = 3,   iter.startup = 5, iter.layer = 30,  verbose = TRUE)
+#PAM clustering
+clust.pam<-pam(x1,3,diss=TRUE)
+plot(clust.pam)
+clusplot(clust.pam,3,col.p=clust.pam$clustering)
+summary(clust.pam)
+par(mfrow = c(3, 1))
+library(fpc)
+t<-nselectboot(x3,B=50,clustermethod=disthclustCBI,method="average",krange=2:7)
+t
+pamk(x2,krange=2:10,criterion="asw", usepam=TRUE,
+     scaling=FALSE, alpha=0.001, diss=inherits(data, "dist"),
+     critout=FALSE, ns=10, seed=NULL)
+     
 
+
+##########Survival analysis
+cType2<-numeric()
+	
+for(i in 1:length(cType)){
+ 	if (chemores.clindat$Type[i]=="SCC" | chemores.clindat$Type[i]=="AC"){cType2[i]="SCC.AC"}
+ 	else{cType2[i]=chemores.clindat$Type[i]}
+ 	}
+ 	table(cType2)
+ 	cType2
+ 	srFit <- survreg(Surv(chemores.clindat$Relapse.time, chemores.clindat$Relapse01) ~ as.factor(cType2),dist="gaussian" )
+summary(srFit)
+##########
+######Validation
+library(biclust)
+tmirdat<-t(mirdat)
+table(cType2)
+dim(cType2)
+cType3<-matrix(rep(0,123),nrow=123)
+	
+for(i in 1:123){
+ 	if (chemores.clindat$Type[i]=="AC" ){cType2[i]<-1}
+ 	if (chemores.clindat$Type[i]=="LCC" ){cType2[i]<-2}
+ 	if (chemores.clindat$Type[i]=="Other ADEC" ){cType2[i]<-3}
+ 	if (chemores.clindat$Type[i]=="Other SCLC" ){cType2[i]<-3}
+ 	if (chemores.clindat$Type[i]=="SCC" ){cType2[i]<-4}
+ 	}
+ 	
+ 	for(i in 1:123){
+ 	if (chemores.clindat$Type[i]=="AC" ){cType3[i]<-"AC"}
+ 	if (chemores.clindat$Type[i]=="LCC" ){cType3[i]<-"LCC" }
+ 	if (chemores.clindat$Type[i]=="Other ADEC" ){cType3[i]<-"Other ADEC-SCLC"}
+ 	if (chemores.clindat$Type[i]=="Other SCLC" ){cType3[i]<-"Other ADEC-SCLC"}
+ 	if (chemores.clindat$Type[i]=="SCC" ){cType3[i]<-"SCC" }
+ 	}
+bi<-biclust(mirdat,method=BCBimax(),10,7, number=100)
+summary(bi)
+
+plotclust(bi,mirdat,bicluster=TRUE)
+                
+   cc<-wilma(x=tmirdat, y=cType2, noc=5)            
+              
+                plot(cc)
+   pp<-pelora(x=tmirdat, y=cType2, noc=5)
+                summary(pp)
+                plot(pp)
+#######
+library(pamr)
+mydata <- list(x=mirdat,y=factor(cType3),geneids=rownames(mirdat),genenames=rownames(mirdat))
+table(chemores.clindat$Type)
+results<- pamr.train(mydata)
+table(results$y)
+pamr.geneplot(results, mydata, threshold=0.5)
+pamr.predict(results, mirdat,1)
+mytrain<-pamr.fdr(results, mydata, nperms=100)
+myfdr <-  pamr.fdr(results, mydata)
+pamr.plotfdr(myfdr)
