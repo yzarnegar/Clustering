@@ -12,20 +12,19 @@ Using mRNA and miRNA data Hierarchical clustering based on complete linkage meth
 ![image](https://user-images.githubusercontent.com/57342758/73779066-fdd07e80-4740-11ea-86d7-cf2d888c7a93.png)
 
 
-![image](https://user-images.githubusercontent.com/57342758/73779085-0923aa00-4741-11ea-9920-f3b764d6ba40.png)
+![image](https://user-images.githubusercontent.com/57342758/73779589-cb735100-4741-11ea-937f-9bfc2903c0a3.png)
 
+Result from PAM clustering of observations for miRNA data also suggested the posibility of more subtypes for NSCLC. It seems with 5 chosen number of clusters, less overlaps between clusters can be detected.
 
-
-
-Regarding the plot from PAM object, it seems there are many over laps for 3 clusters situation. So probably there should be other subtypes of NSCLC besides SCC, LCC and AC addressed by some of the genes. It seems with 5 chosen number of clusters, less overlaps between clusters can be detected. 
-
+![image](https://user-images.githubusercontent.com/57342758/73779537-b8f91780-4741-11ea-8641-5b29a25f438a.png)
 
 
 Hopach Function form “Hopach” package also was used and clusters were produced for miRNA data and the proportion of times a gene belongs to the cluster was calculated. The bootplot function was implemented to provide barplot of the bootstrap reappearance proportions for each gene and each cluster. Following the barplot is provided. 
 
+![image](https://user-images.githubusercontent.com/57342758/73779672-ed6cd380-4741-11ea-953b-e46cec60f13c.png)
+
+Each gene is showed as narrow horizontal bar. If the color of the bar is one color, then the gene is estimated to belong to that cluster otherwise it belongs to more than one cluster. Regarding barplot, it seems there are 3 major cluster of genes probably related to SCC, Ac and LCC but also there are additional clusters of gens suggesting that there should be more subtypes of cancer NSCLC related with those genes. Integration of the mRNA and miRNA data also suggested possibility of new patterns and classes. 
+
+Survival analysis methods were also used to model the survival time to event data. Event was considered as relapse status variable. Subtype SCC was considered as the comparison group. Regarding the flowwing results there is significant difference between sybtype LCC and SCC in terms of survival time. (p-value<0.05).The survival time for SCC was about 2.6 times the survival time for LCC. Also the hazard of the event for subtype LCC is 2.6 times the hazard for SCC. Based on the p-value (0.19) for the log-likelihood ratio test there was not significant difference between our model and null model. 
 
 
-
-Each gene is showed as narrow horizontal bar. If the color of the bar is one color, then the gene is estimated to belong to that cluster otherwise it belongs to more than one cluster. Regarding barplot, it seems there are 3 major cluster of genes probably related to SCC, Ac and LCC but also there are additional clusters of gens suggesting that there should be more subtypes of cancer NSCLC related with those genes. 
-
-![image](https://user-images.githubusercontent.com/57342758/73778670-6a974900-4740-11ea-8b37-23ea77e52049.png)
