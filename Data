@@ -1,6 +1,8 @@
 
 #data:
-The used datasets included 
+Human lung cancers include two major types: small cell lung cancer (SCLC) and non-small cell lung cancer (NSCLC- 80% of all primary lung cancers).
+NSCLC includes subtypes: squamous cell carcinoma (SCC) and adenocarcinoma (AC), and large-cell carci-noma (LCC)
+The used datasets included :
 1-123 observations each with 41000 mRNA gene expres-sion values
 2-939 miRNA expression values and 9 clinical variables
 3-information on survival times with a median follow-up time of 40 months (range 0-92 months) 
