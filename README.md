@@ -9,6 +9,7 @@ The PAM (partitioning around medoids) algorithm is based on the search for k rep
 
 Using mRNA and miRNA data Hierarchical clustering based on complete linkage method and PAM clustering (partitioning around medoids) were performed to see if some new subtypes of non-small cell lung cancer (NSCLC) could be revealed. Result from hierarchical clustering and PAM (cluster package) of observations for mRNA data are showed in figure 1&2. Regarding the results, it seems that there are more that 3 clusters. Also, regarding plot from PAM object, it seems there are many over laps between 3 clusters so there should be more clusters suggesting existence of some new subtypes of disease besides AC, SCC and LCC. 
 
+![hierarchical_clustering](https://github.com/yzarnegar/PAM_Clustering/issues/1#issue-559910635)
 
 
 
