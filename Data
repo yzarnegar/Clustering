@@ -1,1 +1,6 @@
 
+#data:
+The used datasets included 
+1-123 observations each with 41000 mRNA gene expres-sion values
+2-939 miRNA expression values and 9 clinical variables
+3-information on survival times with a median follow-up time of 40 months (range 0-92 months) 
