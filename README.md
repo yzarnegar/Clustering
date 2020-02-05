@@ -1,4 +1,4 @@
-# PAM_Clustering
+# Clustering
 Exploring the Lung cancer subtypes by clustering the mRNA data
 #Question: Are there subtypes of NSCLC other than three known subtypes?
 
