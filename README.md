@@ -1,4 +1,4 @@
-# Clustering
+# Finding more subtypes of non-small cell lung cancer using clustering methods
 Exploring the Lung cancer subtypes by clustering the mRNA data
 #Question: Are there subtypes of NSCLC other than three known subtypes?
 
