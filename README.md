@@ -28,7 +28,7 @@ Each gene is showed as narrow horizontal bar. If the color of the bar is one col
 
 Survival analysis methods were also used to model the survival time to event data. Event was considered as relapse status variable. Subtype SCC was considered as the comparison group. Regarding the following results there is significant difference between sybtype LCC and SCC in terms of survival time. (p-value<0.05).The survival time for SCC was about 2.6 times the survival time for LCC. Also the hazard of the event for subtype LCC is 2.6 times the hazard for SCC. Based on the p-value (0.19) for the log-likelihood ratio test there was not significant difference between our model and null model. 
 
-<img src="https://user-images.githubusercontent.com/57342758/73781115-94526f00-4744-11ea-88f8-8541a0e7d1c8.png" width="400" height="200">
+<img src="https://user-images.githubusercontent.com/57342758/73781115-94526f00-4744-11ea-88f8-8541a0e7d1c8.png" width="600" height="200">
 
 
 Function pamr.cv from package”pamr” was used to do the 10-fold cross validation for nearest shrunken centroid (PAM) classifier produced by pamr.train function. Another error estimate of the number of misclassifications on the training set is the cross validation error. Subtypes ADEC and SCLC were merged as ADEC-SCLC group. For mRNA data the 10-fold cross validation for PAM are shown following. The cross validation error is really low for AC and it is low for SCC but then it increases and it is high for LCC. For group ADEC-SCLC the misclassification error is high probably there was just 3 observation for this group.
